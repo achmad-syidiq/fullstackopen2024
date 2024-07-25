@@ -9,6 +9,7 @@ const Statistics = ({ clicks }) => {
 	if (!totalClick) {
 		return <div>No feedback given</div>;
 	}
+	
 	return (
 		<>
 			<Header text="statistics" />

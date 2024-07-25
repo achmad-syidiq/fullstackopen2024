@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const Header = ({ text }) => <h2>{text}</h2>;
+const Button = ({ click, text }) => <button onClick={click}>{text}</button>;
 const Statistics = ({ clicks }) => {
 	const totalClick = Object.values(clicks).reduce((total, click) => total + click, 0);
 	const averageClick = totalClick !== 0 ? (clicks.good - clicks.bad) / totalClick : 0;
@@ -8,7 +9,6 @@ const Statistics = ({ clicks }) => {
 	if (!totalClick) {
 		return <div>No feedback given</div>;
 	}
-
 	return (
 		<>
 			<Header text="statistics" />
@@ -35,7 +35,6 @@ const StatisticsLine = ({ text, value }) => {
 	);
 };
 
-const Button = ({ click, text }) => <button onClick={click}>{text}</button>;
 const App = () => {
 	const [prevClicks, setClick] = useState({ good: 0, neutral: 0, bad: 0 });
 	const incrementGoodClick = () => setClick({ ...prevClicks, good: prevClicks.good + 1 });

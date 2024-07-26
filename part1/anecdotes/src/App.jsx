@@ -38,11 +38,11 @@ const App = () => {
 		}
 		return setSelected(randomIndex);
 	};
-  const handleVoteAnecdote = () => {
-    const selectedAnecdote = anecdotes[selected];
-    const updatedVotes = { ...votes, [selectedAnecdote]: votes[selectedAnecdote] + 1 };
-    setVotes(updatedVotes);
-  };
+	const handleVoteAnecdote = () => {
+		const selectedAnecdote = anecdotes[selected];
+		const updatedVotes = { ...votes, [selectedAnecdote]: votes[selectedAnecdote] + 1 };
+		setVotes(updatedVotes);
+	};
 
 	return (
 		<div>

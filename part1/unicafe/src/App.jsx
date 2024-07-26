@@ -11,7 +11,7 @@ const Statistics = ({ clicks }) => {
 	}
 
 	return (
-		<>
+		<div>
 			<Header text="statistics" />
 			<table style={{ border: "none" }}>
 				<StatisticsLine text="good" value={clicks.good} />
@@ -21,7 +21,7 @@ const Statistics = ({ clicks }) => {
 				<StatisticsLine text="average" value={averageClick} />
 				<StatisticsLine text="positive" value={`${positiveFeedback} %`} />
 			</table>
-		</>
+		</div>
 	);
 };
 

@@ -7,9 +7,9 @@ const Statistics = ({ clicks }) => {
 	const averageClick = totalClick !== 0 ? (clicks.good - clicks.bad) / totalClick : 0;
 	const positiveFeedback = clicks.good !== 0 ? (clicks.good / totalClick) * 100 : 0;
 	if (!totalClick) {
-		return <div>No feedback given</div>;
+		return <p>No feedback given</p>;
 	}
-	
+
 	return (
 		<>
 			<Header text="statistics" />
